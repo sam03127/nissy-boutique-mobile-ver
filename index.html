@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nissy Boutique — Women's ethnic and modern wear in Rajahmundry.">
+<title>Nissy Boutique | Rajahmundry</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --blue:#305eb4;
+  --blue-dark:#21478e;
+  --blue-soft:#edf3ff;
+  --blue-pale:#f6f8ff;
+  --ink:#17213a;
+  --muted:#65708a;
+  --line:#dbe3f2;
+  --white:#ffffff;
+  --cream:#fbfaf7;
+  --shadow:0 22px 60px rgba(36,72,142,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:var(--cream);
+  font-family:"DM Sans",Arial,sans-serif;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+img{max-width:100%;display:block}
+
+.topbar{
+  min-height:34px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:8px 14px;
+  background:var(--blue);
+  color:#fff;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  text-align:center;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  max-width:1440px;
+  height:88px;
+  margin:auto;
+  padding:0 34px;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  gap:24px;
+}
+.nav-left,.nav-right{
+  display:flex;
+  align-items:center;
+  gap:28px;
+}
+.nav-right{justify-content:flex-end}
+.nav a,.nav button{
+  border:0;
+  background:none;
+  cursor:pointer;
+  color:var(--ink);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  transition:.2s ease;
+}
+.nav a:hover{color:var(--blue)}
+.brand{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.brand img{
+  width:145px;
+  height:auto;
+}
+.hamb{display:none}
+
+.hero{
+  position:relative;
+  min-height:calc(100vh - 122px);
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+}
+.hero-copy{
+  position:relative;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:clamp(60px,8vw,125px);
+  background:var(--blue);
+  color:#fff;
+}
+.hero-copy::before,
+.hero-copy::after{
+  content:"✦";
+  position:absolute;
+  color:rgba(255,255,255,.25);
+  line-height:1;
+}
+.hero-copy::before{font-size:105px;right:7%;top:8%}
+.hero-copy::after{font-size:38px;left:8%;bottom:11%}
+
+.eyebrow{
+  margin-bottom:18px;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+.hero h1{
+  margin:0;
+  max-width:720px;
+  font-family:"Bree Serif",Georgia,serif;
+  font-size:clamp(58px,8vw,122px);
+  line-height:.82;
+  font-weight:600;
+  letter-spacing:-.065em;
+}
+.hero-copy p{
+  max-width:490px;
+  margin:30px 0 30px;
+  color:rgba(255,255,255,.82);
+  font-size:15px;
+  line-height:1.85;
+}
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.btn{
+  min-height:48px;
+  padding:0 23px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid var(--blue);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  transition:.25s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn.light{background:#fff;color:var(--blue);border-color:#fff}
+.btn.outline-light{color:#fff;border-color:rgba(255,255,255,.55)}
+.btn.outline-light:hover{background:#fff;color:var(--blue)}
+
+.hero-visual{
+  position:relative;
+  min-height:620px;
+  display:grid;
+  place-items:center;
+  background:
+    radial-gradient(circle at 72% 19%,rgba(48,94,180,.20),transparent 22%),
+    radial-gradient(circle at 20% 82%,rgba(48,94,180,.10),transparent 25%),
+    var(--blue-pale);
+}
+.hero-visual::before{
+  content:"";
+  position:absolute;
+  width:430px;
+  height:430px;
+  border:1px solid rgba(48,94,180,.18);
+  border-radius:50%;
+}
+.hero-card{
+  position:relative;
+  width:min(68%,500px);
+  aspect-ratio:4/5;
+  overflow:hidden;
+  border:10px solid #fff;
+  box-shadow:var(--shadow);
+  background:
+    linear-gradient(160deg,rgba(48,94,180,.03),rgba(48,94,180,.08)),
+    url("https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=1200&q=85") center/cover;
+  transform:rotate(2deg);
+}
+.hero-stamp{
+  position:absolute;
+  right:8%;
+  bottom:10%;
+  width:126px;
+  height:126px;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  border-radius:50%;
+  background:#fff;
+  border:1px solid var(--blue);
+  color:var(--blue);
+  box-shadow:0 12px 35px rgba(36,72,142,.12);
+  font-size:9px;
+  font-weight:700;
+  line-height:1.6;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+.section{
+  padding:96px 34px;
+  border-bottom:1px solid var(--line);
+}
+.section-inner{
+  max-width:1440px;
+  margin:auto;
+}
+.section-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:25px;
+  margin-bottom:38px;
+}
+.section h2{
+  margin:0;
+  font-family:"Bree Serif",Georgia,serif;
+  font-size:clamp(44px,5.5vw,78px);
+  line-height:.9;
+  font-weight:600;
+  letter-spacing:-.045em;
+}
+.section-head p{
+  max-width:380px;
+  margin:0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.8;
+}
+
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+.product-img{
+  position:relative;
+  aspect-ratio:3/4;
+  overflow:hidden;
+  background:var(--blue-soft);
+}
+.product-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .55s ease;
+}
+.product:hover .product-img img{transform:scale(1.045)}
+.tag{
+  position:absolute;
+  z-index:2;
+  top:12px;
+  left:12px;
+  padding:7px 10px;
+  background:#fff;
+  color:var(--blue);
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.product-info{
+  padding:15px 2px 0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.product-info h3{
+  margin:0;
+  font-size:12px;
+  font-weight:700;
+}
+.product-info span{
+  color:var(--blue);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.06em;
+}
+
+.marquee{
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+  background:#fff;
+  color:var(--blue);
+  padding:15px 0;
+}
+.marquee-track{
+  width:max-content;
+  display:flex;
+  gap:50px;
+  animation:scroll 24s linear infinite;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+.category-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.category{
+  position:relative;
+  min-height:500px;
+  overflow:hidden;
+  background:var(--blue-soft);
+}
+.category img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.6s ease;
+}
+.category:hover img{transform:scale(1.045)}
+.category::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(transparent 42%,rgba(20,47,97,.78));
+}
+.category-copy{
+  position:absolute;
+  z-index:2;
+  left:24px;
+  right:24px;
+  bottom:24px;
+  color:#fff;
+}
+.category-copy h3{
+  margin:0 0 8px;
+  font-family:"Bree Serif",Georgia,serif;
+  font-size:42px;
+  font-weight:600;
+}
+.category-copy span{
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+.about-visual{
+  position:relative;
+}
+.about-visual img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+}
+.about-visual::after{
+  content:"NISSY";
+  position:absolute;
+  left:-12px;
+  bottom:-12px;
+  padding:12px 17px;
+  background:var(--blue);
+  color:#fff;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.2em;
+}
+.about h2{font-size:clamp(46px,6vw,84px);margin-bottom:25px}
+.about p{
+  max-width:550px;
+  color:#59647b;
+  font-size:14px;
+  line-height:1.95;
+}
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  margin-top:35px;
+  border-top:1px solid var(--line);
+}
+.stat{
+  padding:18px 12px 0;
+  border-right:1px solid var(--line);
+}
+.stat:last-child{border-right:0}
+.stat strong{
+  display:block;
+  color:var(--blue);
+  font-family:"Bree Serif",Georgia,serif;
+  font-size:35px;
+}
+.stat span{
+  color:var(--muted);
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+
+.social{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:500px;
+}
+.social-copy{
+  padding:80px clamp(34px,7vw,100px);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:var(--blue-soft);
+}
+.social-copy .eyebrow{color:var(--blue)}
+.social-copy h2{
+  margin:0 0 25px;
+  font-family:"Bree Serif",Georgia,serif;
+  font-size:clamp(52px,7vw,96px);
+  line-height:.86;
+  letter-spacing:-.055em;
+}
+.social-copy p{
+  max-width:440px;
+  margin:0 0 28px;
+  color:#59647b;
+  line-height:1.8;
+  font-size:14px;
+}
+.social-visual{
+  min-height:500px;
+  background:
+    linear-gradient(135deg,rgba(48,94,180,.10),rgba(255,255,255,0)),
+    url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=85") center/cover;
+}
+
+footer{
+  background:var(--blue);
+  color:#fff;
+  padding:60px 34px 25px;
+}
+.footer-top{
+  max-width:1440px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:45px;
+  padding-bottom:55px;
+}
+.footer-logo{
+  width:155px;
+  margin-bottom:20px;
+  filter:brightness(0) invert(1);
+}
+footer h4{
+  margin:0 0 18px;
+  color:rgba(255,255,255,.62);
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+}
+footer a,footer p{
+  margin:0;
+  color:#fff;
+  font-size:12px;
+  line-height:2;
+}
+footer a:hover{text-decoration:underline}
+.footer-bottom{
+  max-width:1440px;
+  margin:auto;
+  padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.22);
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  color:rgba(255,255,255,.62);
+  font-size:9px;
+  letter-spacing:.04em;
+}
+
+.mobile-menu{
+  display:none;
+}
+
+@media(max-width:950px){
+  .nav{height:74px;padding:0 20px;grid-template-columns:auto 1fr auto}
+  .nav-left{display:none}
+  .hamb{display:block;color:var(--blue)!important;font-size:19px!important;line-height:1}
+  .nav-right{gap:13px}
+  .nav-right a:not(.icon-link){display:none}
+  .brand img{width:116px}
+
+  .hero{grid-template-columns:1fr}
+  .hero-copy{padding:72px 24px 58px}
+  .hero-visual{min-height:520px}
+  .hero-card{width:min(72%,470px)}
+
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+  .category-grid{grid-template-columns:1fr}
+  .category{min-height:540px}
+  .about{grid-template-columns:1fr;gap:40px}
+  .social{grid-template-columns:1fr}
+  .social-visual{min-height:430px}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:560px){
+  .topbar{font-size:8px;letter-spacing:.1em}
+  .nav{height:68px}
+  .brand img{width:103px}
+
+  .hero-copy{padding:62px 18px 48px}
+  .hero h1{font-size:62px}
+  .hero-copy p{font-size:13px;line-height:1.8}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .btn{width:100%}
+  .hero-visual{min-height:450px}
+  .hero-card{width:74%;border-width:7px}
+  .hero-stamp{width:96px;height:96px;right:6%;font-size:8px}
+
+  .section{padding:68px 14px}
+  .section-head{display:block}
+  .section-head p{margin-top:16px}
+  .product-grid{gap:22px 9px}
+  .product-info{display:block}
+  .product-info span{display:block;margin-top:5px}
+  .category{min-height:450px}
+  .category-copy h3{font-size:35px}
+
+  .about-visual::after{left:0}
+  .stats{grid-template-columns:1fr 1fr 1fr}
+  .stat strong{font-size:27px}
+  .stat span{font-size:7px}
+
+  .social-copy{padding:68px 18px}
+  .social-visual{min-height:360px}
+  .footer-top{grid-template-columns:1fr 1fr;gap:30px 18px}
+  footer{padding:50px 18px 22px}
+  .footer-bottom{display:block}
+  .footer-bottom span{display:block;margin-top:7px}
+}
+
+/* Nissy-logo-inspired typography */
+h1,h2,h3,.category-copy h3,.stat strong,.social-copy h2{
+  letter-spacing:.025em;
+}
+.hero h1{
+  letter-spacing:.018em;
+}
+
+h1,h2,h3,.category-copy h3,.stat strong,.social-copy h2{
+  font-family:"Bree Serif",Georgia,serif;
+  font-weight:400;
+}
+.nav a,.nav button,.topbar,.eyebrow,.tag,.product-info span,
+.category-copy span,footer h4,.footer-bottom{
+  font-family:"DM Sans",Arial,sans-serif;
+}
+
+
+/* Extra Nissy-inspired tracking */
+h1,h2,h3,.category-copy h3,.stat strong,.social-copy h2{
+  letter-spacing:.045em !important;
+  word-spacing:.12em !important;
+}
+.hero h1{
+  letter-spacing:.035em !important;
+  word-spacing:.10em !important;
+}
+
+
+/* Balanced spacing for the Nissy hero heading */
+.hero-title{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:.12em;
+  line-height:.88;
+  letter-spacing:.035em !important;
+  word-spacing:.08em !important;
+}
+.hero-title span{
+  display:block;
+}
+@media(max-width:560px){
+  .hero-title{
+    gap:.14em;
+    line-height:.86;
+    letter-spacing:.025em !important;
+  }
+}
+
+</style>
+
+<style>
+/* ================================
+   NISSY BOUTIQUE — MOBILE VERSION
+   ================================ */
+@media (max-width: 700px){
+
+  body{
+    width:100%;
+    overflow-x:hidden;
+    background:#fbfaf7;
+  }
+
+  .topbar{
+    min-height:32px;
+    padding:8px 10px;
+    font-size:7.5px;
+    letter-spacing:.09em;
+  }
+
+  header{
+    position:sticky;
+    top:0;
+  }
+
+  .nav{
+    height:70px;
+    padding:0 17px;
+    display:grid;
+    grid-template-columns:34px 1fr 34px;
+    gap:5px;
+  }
+
+  .hamb{
+    display:block;
+    width:34px;
+    padding:0;
+    color:var(--blue)!important;
+    font-size:18px!important;
+  }
+
+  .brand img{
+    width:108px;
+    margin:auto;
+  }
+
+  .nav-right{
+    display:flex;
+    justify-content:flex-end;
+  }
+
+  .nav-right .icon-link{
+    display:block!important;
+    font-size:0!important;
+  }
+
+  .nav-right .icon-link::after{
+    content:"◎";
+    font-size:21px;
+    color:var(--blue);
+  }
+
+  .mobile-menu a{
+    padding:15px 2px;
+    font-size:9px;
+  }
+
+  /* Hero becomes a clean single-column mobile fashion layout */
+  .hero{
+    display:flex;
+    flex-direction:column;
+    min-height:auto;
+  }
+
+  .hero-copy{
+    order:1;
+    padding:58px 22px 52px;
+    min-height:505px;
+    justify-content:center;
+  }
+
+  .hero-copy::before{
+    font-size:72px;
+    right:7%;
+    top:6%;
+  }
+
+  .hero-copy::after{
+    font-size:30px;
+    left:7%;
+    bottom:8%;
+  }
+
+  .hero .eyebrow{
+    margin-bottom:20px;
+    font-size:8px;
+    letter-spacing:.18em;
+  }
+
+  .hero-title{
+    gap:.18em!important;
+    line-height:.82!important;
+    letter-spacing:.02em!important;
+    word-spacing:.06em!important;
+  }
+
+  .hero-title span{
+    white-space:nowrap;
+  }
+
+  .hero h1{
+    font-size:clamp(57px,18vw,82px);
+  }
+
+  .hero-copy p{
+    margin:27px 0 25px;
+    max-width:330px;
+    font-size:12px;
+    line-height:1.8;
+  }
+
+  .hero-actions{
+    width:100%;
+    gap:9px;
+  }
+
+  .hero-actions .btn{
+    min-height:45px;
+    width:100%;
+    font-size:8.5px;
+  }
+
+  .hero-visual{
+    order:2;
+    min-height:430px;
+    padding:42px 0;
+  }
+
+  .hero-visual::before{
+    width:300px;
+    height:300px;
+  }
+
+  .hero-card{
+    width:68%;
+    max-width:330px;
+    border-width:7px;
+  }
+
+  .hero-stamp{
+    width:91px;
+    height:91px;
+    right:8%;
+    bottom:9%;
+    font-size:7px;
+  }
+
+  .marquee{
+    padding:12px 0;
+  }
+
+  .marquee-track{
+    font-size:8px;
+    gap:35px;
+  }
+
+  .section{
+    padding:62px 16px;
+  }
+
+  .section-head{
+    display:block;
+    margin-bottom:27px;
+  }
+
+  .section h2{
+    font-size:46px;
+    line-height:.92;
+    letter-spacing:.025em!important;
+    word-spacing:.08em!important;
+  }
+
+  .section-head p{
+    margin-top:16px;
+    font-size:11px;
+    line-height:1.75;
+  }
+
+  .product-grid{
+    grid-template-columns:1fr 1fr;
+    gap:26px 10px;
+  }
+
+  .product-img{
+    aspect-ratio:3/4;
+  }
+
+  .tag{
+    top:8px;
+    left:8px;
+    padding:6px 7px;
+    font-size:6.5px;
+  }
+
+  .product-info{
+    padding-top:10px;
+  }
+
+  .product-info h3{
+    font-size:9px;
+    line-height:1.35;
+  }
+
+  .product-info span{
+    display:block;
+    margin-top:4px;
+    font-size:7px;
+  }
+
+  .category-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+
+  .category{
+    min-height:430px;
+  }
+
+  .category-copy{
+    left:18px;
+    right:18px;
+    bottom:18px;
+  }
+
+  .category-copy h3{
+    margin-bottom:6px;
+    font-size:38px;
+    letter-spacing:.025em!important;
+  }
+
+  .category-copy span{
+    font-size:7px;
+  }
+
+  .about{
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+  }
+
+  .about-visual img{
+    aspect-ratio:1/1;
+  }
+
+  .about-visual::after{
+    left:0;
+    bottom:0;
+  }
+
+  .about h2{
+    font-size:52px;
+    line-height:.88;
+  }
+
+  .about p{
+    font-size:12px;
+    line-height:1.85;
+  }
+
+  .stats{
+    margin-top:28px;
+  }
+
+  .stat{
+    padding:15px 7px 0;
+  }
+
+  .stat strong{
+    font-size:27px;
+  }
+
+  .stat span{
+    font-size:6.5px;
+    line-height:1.4;
+  }
+
+  .social{
+    display:flex;
+    flex-direction:column;
+    min-height:auto;
+  }
+
+  .social-copy{
+    min-height:430px;
+    padding:62px 18px;
+  }
+
+  .social-copy h2{
+    font-size:54px;
+    line-height:.86;
+    letter-spacing:.03em!important;
+  }
+
+  .social-copy p{
+    font-size:12px;
+    line-height:1.8;
+  }
+
+  .social-copy .btn{
+    width:100%;
+    min-height:45px;
+    font-size:8px;
+  }
+
+  .social-visual{
+    min-height:390px;
+  }
+
+  footer{
+    padding:48px 18px 20px;
+  }
+
+  .footer-top{
+    grid-template-columns:1fr 1fr;
+    gap:35px 22px;
+    padding-bottom:38px;
+  }
+
+  .footer-top>div:first-child{
+    grid-column:1/-1;
+  }
+
+  .footer-logo{
+    width:130px;
+  }
+
+  footer h4{
+    margin-bottom:12px;
+    font-size:7px;
+  }
+
+  footer a,footer p{
+    font-size:9px;
+    line-height:1.9;
+  }
+
+  .footer-bottom{
+    display:block;
+    font-size:7px;
+    line-height:1.7;
+  }
+
+  .footer-bottom span{
+    display:block;
+    margin-top:5px;
+  }
+}
+
+/* Extra-small phones */
+@media (max-width:380px){
+  .hero-copy{
+    padding-left:17px;
+    padding-right:17px;
+  }
+
+  .hero h1{
+    font-size:54px;
+  }
+
+  .hero-copy p{
+    max-width:290px;
+  }
+
+  .section h2{
+    font-size:42px;
+  }
+
+  .category{
+    min-height:390px;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="topbar">Nissy Boutique · Women's Ethnic & Modern Wear · Rajahmundry</div>
+
+<header>
+  <nav class="nav">
+    <div class="nav-left">
+      <a href="#new">New In</a>
+      <a href="#collections">Collections</a>
+      <a href="#about">Our Story</a>
+    </div>
+
+    <button class="hamb" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+
+    <a class="brand" href="#" aria-label="Nissy Boutique home">
+      <img src="nissy-logo.png" alt="Nissy Boutique">
+    </a>
+
+    <div class="nav-right">
+      <a href="#contact">Contact</a>
+      <a class="icon-link" href="https://www.instagram.com/nissy_boutique_rajahmundry/" target="_blank" rel="noopener">Instagram ↗</a>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#new" onclick="closeMenu()">New In</a>
+    <a href="#collections" onclick="closeMenu()">Collections</a>
+    <a href="#about" onclick="closeMenu()">Our Story</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+    <a href="https://www.instagram.com/nissy_boutique_rajahmundry/" target="_blank" rel="noopener">Instagram ↗</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">Rajahmundry · Est. 12+ Years</div>
+    <h1 class="hero-title"><span>Style</span><span>with</span><span>Nissy.</span></h1>
+    <p>Curated ethnic and modern wear for women who love effortless style. Discover statement pieces, everyday elegance and occasion-ready looks.</p>
+    <div class="hero-actions">
+      <a class="btn light" href="#new">Explore Collection</a>
+      <a class="btn outline-light" href="https://www.instagram.com/nissy_boutique_rajahmundry/" target="_blank" rel="noopener">Shop on Instagram ↗</a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-card"></div>
+    <div class="hero-stamp">Made for<br>your style<br>✦</div>
+  </div>
+</section>
+
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Ethnic Edit ✦ Modern Classics ✦ Occasion Wear ✦ Curated Collections ✦ Rajahmundry ✦</span>
+    <span>Ethnic Edit ✦ Modern Classics ✦ Occasion Wear ✦ Curated Collections ✦ Rajahmundry ✦</span>
+  </div>
+</div>
+
+<section class="section" id="new">
+  <div class="section-inner">
+    <div class="section-head">
+      <h2>New Arrivals</h2>
+      <p>Fresh silhouettes, elegant fabrics and versatile pieces selected for the season.</p>
+    </div>
+
+    <div class="product-grid">
+      <article class="product">
+        <div class="product-img">
+          <span class="tag">New</span>
+          <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=85" alt="Ethnic fashion">
+        </div>
+        <div class="product-info"><h3>Festive Edit</h3><span>Explore ↗</span></div>
+      </article>
+
+      <article class="product">
+        <div class="product-img">
+          <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=900&q=85" alt="Indian fashion">
+        </div>
+        <div class="product-info"><h3>Everyday Elegance</h3><span>Explore ↗</span></div>
+      </article>
+
+      <article class="product">
+        <div class="product-img">
+          <span class="tag">Featured</span>
+          <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=900&q=85" alt="Women's boutique fashion">
+        </div>
+        <div class="product-info"><h3>Modern Classics</h3><span>Explore ↗</span></div>
+      </article>
+
+      <article class="product">
+        <div class="product-img">
+          <img src="https://images.unsplash.com/photo-1612336307429-8a898d10e223?auto=format&fit=crop&w=900&q=85" alt="Women's dress">
+        </div>
+        <div class="product-info"><h3>Occasion Wear</h3><span>Explore ↗</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="collections">
+  <div class="section-inner">
+    <div class="section-head">
+      <h2>Shop the Edit</h2>
+      <p>Choose a mood. Find a look. Message us on Instagram for availability and styling help.</p>
+    </div>
+
+    <div class="category-grid">
+      <a class="category" href="https://www.instagram.com/nissy_boutique_rajahmundry/" target="_blank" rel="noopener">
+        <img src="https://images.unsplash.com/photo-1610030469668-8f3f5d5e7f9b?auto=format&fit=crop&w=1200&q=85" alt="Sarees">
+        <div class="category-copy"><h3>Sarees</h3><span>Discover ↗</span></div>
+      </a>
+
+      <a class="category" href="https://www.instagram.com/nissy_boutique_rajahmundry/" target="_blank" rel="noopener">
+        <img src="https://images.unsplash.com/photo-1583391733981-849840a4a4a5?auto=format&fit=crop&w=1200&q=85" alt="Ethnic wear">
+        <div class="category-copy"><h3>Ethnic Edit</h3><span>Discover ↗</span></div>
+      </a>
+
+      <a class="category" href="https://www.instagram.com/nissy_boutique_rajahmundry/" target="_blank" rel="noopener">
+        <img src="https://images.unsplash.com/photo-1566206091558-7f218b696731?auto=format&fit=crop&w=1200&q=85" alt="Modern dresses">
+        <div class="category-copy"><h3>Modern Wear</h3><span>Discover ↗</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="section-inner">
+    <div class="about">
+      <div class="about-visual">
+        <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1200&q=85" alt="Fashion details">
+      </div>
+
+      <div>
+        <div class="eyebrow" style="color:var(--blue)">The Nissy Story</div>
+        <h2>Style,<br>curated.</h2>
+        <p>Nissy Boutique brings together women's ethnic and modern wear with a focus on timeless style, beautiful details and pieces that feel special. With 12+ years of experience, we're here to make finding your next favourite outfit easy.</p>
+
+        <div class="stats">
+          <div class="stat"><strong>12+</strong><span>Years experience</span></div>
+          <div class="stat"><strong>183</strong><span>Instagram posts</span></div>
+          <div class="stat"><strong>916</strong><span>Followers</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="social" id="contact">
+  <div class="social-copy">
+    <div class="eyebrow">@nissy_boutique_rajahmundry</div>
+    <h2>See more.<br>Shop direct.</h2>
+    <p>New arrivals and boutique updates live on Instagram. Send us a DM for availability, sizing and shopping assistance.</p>
+    <div>
+      <a class="btn" style="background:var(--blue);color:#fff;border-color:var(--blue)" href="https://www.instagram.com/nissy_boutique_rajahmundry/" target="_blank" rel="noopener">Visit Instagram ↗</a>
+    </div>
+  </div>
+  <div class="social-visual"></div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <img class="footer-logo" src="nissy-logo.png" alt="Nissy Boutique">
+      <p>Women's Boutique · Ethnic & Modern Wear<br>Rajahmundry, Andhra Pradesh</p>
+    </div>
+
+    <div>
+      <h4>Explore</h4>
+      <a href="#new">New Arrivals</a><br>
+      <a href="#collections">Collections</a><br>
+      <a href="#about">Our Story</a>
+    </div>
+
+    <div>
+      <h4>Shop</h4>
+      <a href="https://www.instagram.com/nissy_boutique_rajahmundry/" target="_blank" rel="noopener">Instagram ↗</a><br>
+      <a href="https://www.instagram.com/nissy_boutique_rajahmundry/" target="_blank" rel="noopener">DM to Shop ↗</a>
+    </div>
+
+    <div>
+      <h4>Location</h4>
+      <p>Rajahmundry<br>Andhra Pradesh, India</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 Nissy Boutique. All rights reserved.</span>
+    <span>Designed for Nissy Boutique · Rajahmundry</span>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById("mobileMenu").classList.toggle("open");
+}
+function closeMenu(){
+  document.getElementById("mobileMenu").classList.remove("open");
+}
+</script>
+
+<style>
+.mobile-menu{
+  max-height:0;
+  overflow:hidden;
+  background:#fff;
+  transition:max-height .3s ease;
+}
+.mobile-menu.open{
+  max-height:360px;
+  border-top:1px solid var(--line);
+  padding:8px 20px 16px;
+}
+.mobile-menu a{
+  display:block;
+  padding:13px 0;
+  border-bottom:1px solid var(--line);
+  color:var(--ink);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+@media(min-width:951px){
+  .mobile-menu{display:none!important}
+}
+</style>
+</body>
+</html>
