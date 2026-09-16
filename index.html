@@ -838,13 +838,18 @@ h1,h2,h3,.category-copy h3,.stat strong,.social-copy h2{
   </nav>
 
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#new" onclick="closeMenu()">New In</a>
-    <a href="#collections" onclick="closeMenu()">Collections</a>
-    <a href="#about" onclick="closeMenu()">Our Story</a>
-    <a href="#contact" onclick="closeMenu()">Contact</a>
-    <a href="https://www.instagram.com/nissy_boutique_rajahmundry/" target="_blank" rel="noopener">Instagram ↗</a>
+    <a href="#new" onclick="closeMenu()">Offers &amp; New Arrival</a>
+    <a href="#customization" onclick="closeMenu()">Customization</a>
+    <a href="#collections" onclick="closeMenu()">Categories</a>
+    <a href="#rented-jewellery" onclick="closeMenu()">Rented Jewellery</a>
+    <a href="#testimonials" onclick="closeMenu()">Testimonials &amp; Reviews</a>
+    <a href="#contact" onclick="closeMenu()">Customer Support</a>
   </div>
 </header>
+
+<div id="customization" class="menu-anchor"></div>
+<div id="rented-jewellery" class="menu-anchor"></div>
+<div id="testimonials" class="menu-anchor"></div>
 
 <main>
 <section class="hero">
@@ -1017,7 +1022,7 @@ function closeMenu(){
   transition:max-height .3s ease;
 }
 .mobile-menu.open{
-  max-height:360px;
+  max-height:520px;
   border-top:1px solid var(--line);
   padding:8px 20px 16px;
 }
@@ -1033,6 +1038,12 @@ function closeMenu(){
 }
 @media(min-width:951px){
   .mobile-menu{display:none!important}
+}
+.menu-anchor{
+  position:relative;
+  top:-80px;
+  height:0;
+  overflow:hidden;
 }
 </style>
 </body>
